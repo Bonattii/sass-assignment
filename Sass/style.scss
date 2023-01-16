@@ -8,6 +8,13 @@
   padding: 0;
 }
 
+body {
+  a {
+      text-decoration: none;
+      color: $white
+    }
+}
+
 
 h1 {
   color: $primary;
@@ -16,7 +23,11 @@ h1 {
 }
 
 header {
+  margin-bottom: 100px;
+
   nav {
+    margin-inline: 50px;
+
     ul {
 
       @include flexContainer(column);
@@ -27,7 +38,6 @@ header {
 
       li {
         background-color: $primary;
-        color: $white;
         padding: 20px;
       }
     }
@@ -57,15 +67,96 @@ header {
 
     img {
       width: 100%;
+      height: 200px;
     }
 
     p {
       // padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       display: -webkit-box;
+    }
+  }
+}
+
+.info-container {
+  margin-inline: 50px;
+  display: flex;
+  flex-direction: column;
+
+  .image-first {
+    margin: 50px 0;
+
+    img {
+      width: 100%;
+      height: 300px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      margin: 20px 0;
+
+      h2 {
+        margin-bottom: 20px;
+        color: $primary;
+        font-size: 26px;
+      }
+    }
+  }
+
+  .image-last {
+    @extend .image-first;
+  }
+}
+
+.contact-form {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        width: 350px;
+        height: 35px;
+
+        margin: 10px 0;
+      }
+
+      textarea {
+        @extend input;
+        height: 100px;
+        resize: none;
+      }
+    }
+
+    button {
+      width: 350px;
+      height: 35px;
+      margin-top: 20px;
+
+      background-color: $primary;
+      border-radius: 10px;
+      border: 1px solid $primary;
+
+      color: $white;
+    }
+
+    button:hover {
+      background-color: $white;
+      color: $primary;
+      border: 1px solid $red;
     }
   }
 }

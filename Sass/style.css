@@ -7,12 +7,23 @@ body {
   padding: 0;
 }
 
+body a {
+  text-decoration: none;
+  color: white;
+}
+
 h1 {
   color: brown;
   padding: 20px;
   text-align: center;
 }
 
+header {
+  margin-bottom: 100px;
+}
+header nav {
+  margin-inline: 50px;
+}
 header nav ul {
   display: flex;
   flex-direction: column;
@@ -22,7 +33,6 @@ header nav ul {
 }
 header nav ul li {
   background-color: brown;
-  color: white;
   padding: 20px;
 }
 
@@ -44,13 +54,74 @@ header nav ul li {
 }
 .items-container .item img {
   width: 100%;
+  height: 200px;
 }
 .items-container .item p {
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   display: -webkit-box;
+}
+
+.info-container {
+  margin-inline: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.info-container .image-first, .info-container .image-last {
+  margin: 50px 0;
+}
+.info-container .image-first img, .info-container .image-last img {
+  width: 100%;
+  height: 300px;
+}
+.info-container .image-first div, .info-container .image-last div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 20px 0;
+}
+.info-container .image-first div h2, .info-container .image-last div h2 {
+  margin-bottom: 20px;
+  color: brown;
+  font-size: 26px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form form div input, .contact-form form div textarea {
+  width: 350px;
+  height: 35px;
+  margin: 10px 0;
+}
+.contact-form form div textarea {
+  height: 100px;
+  resize: none;
+}
+.contact-form form button {
+  width: 350px;
+  height: 35px;
+  margin-top: 20px;
+  background-color: brown;
+  border-radius: 10px;
+  border: 1px solid brown;
+  color: white;
+}
+.contact-form form button:hover {
+  background-color: white;
+  color: brown;
+  border: 1px solid brown;
 }
 
 .button-container {
@@ -91,5 +162,35 @@ header nav ul li {
     flex-direction: row;
     justify-content: center;
     margin: 20px;
+  }
+  .info-container {
+    margin-inline: 100px;
+  }
+  .info-container .image-first, .info-container .image-last {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    margin-bottom: 100px;
+  }
+  .info-container .image-first img, .info-container .image-last img {
+    width: 100%;
+    height: 300px;
+  }
+  .info-container .image-first div, .info-container .image-last div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .info-container .image-first div h2, .info-container .image-last div h2 {
+    margin-bottom: 20px;
+  }
+  .info-container .image-first div p, .info-container .image-last div p {
+    padding-inline: 100px;
+  }
+  .info-container .image-last {
+    grid-template-columns: 1fr 40%;
+  }
+  .info-container .image-last img {
+    order: 2;
   }
 }/*# sourceMappingURL=style.css.map */
